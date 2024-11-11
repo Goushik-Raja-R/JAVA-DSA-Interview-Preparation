@@ -1,0 +1,39 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "TwoSumSorted",
+      "request": "launch",
+      "mainClass": "TwoSumSorted",
+      "projectName": "BinaryAssignments_b7493e47"
+    },
+    {
+      "type": "java",
+      "name": "FindBadOrGood",
+      "request": "launch",
+      "mainClass": "FindBadOrGood",
+      "projectName": "BinaryAssignments_b7493e47"
+    },
+    {
+      "type": "java",
+      "name": "GuessGame",
+      "request": "launch",
+      "mainClass": "GuessGame",
+      "projectName": "BinaryAssignments_b7493e47"
+    },
+    {
+      "name": "Attach to Edge",
+      "port": 9222,
+      "request": "attach",
+      "type": "msedge",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Attach to Edge",
+      "port": 5000,
+      "request": "attach",
+      "type": "msedge",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}

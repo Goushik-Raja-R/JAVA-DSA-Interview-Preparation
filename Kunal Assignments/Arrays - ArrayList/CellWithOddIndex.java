@@ -1,53 +1,83 @@
 import java.util.Arrays;
 import java.util.Scanner;
+// 1252. Cells with Odd Values in a Matrix : https://leetcode.com/problems/cells-with-odd-values-in-a-matrix/description/
 
 public class CellWithOddIndex {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.print("Enter the row size: ");
-        int n = s.nextInt();
+        int row1 = s.nextInt();
         System.out.print("Enter the column size: ");
-        int m = s.nextInt();
+        int col1 = s.nextInt();
 
-        int[][] indices = new int[n][m];
+        int[][] indices = new int[row1][col1];
 
-        for (int row = 0; row < n; row++) {
-            for (int col = 0; col < m; col++) {
+        for (int row = 0; row < row1; row++) {
+            for (int col = 0; col < col1; col++) {
                 indices[row][col] = s.nextInt();
             }
         }
 
+        System.out.print("Enter the row size New Array: ");
+        int m = s.nextInt();
+        System.out.print("Enter the column size New Array: ");
+        int n = s.nextInt();
+
         int ans = oddCells(m, n, indices);
         System.out.println(ans);
+        s.close();
     }
 
     public static int oddCells(int m, int n, int[][] indices) {
 
-        int[] row = new int[m];
-        int[] col = new int[n];
-        int c = 0;
+        int[][] ans = new int[m][n];
+
+        // for (int i = 0; i < indices.length; i++) {
+        // int len = indices[i][0];
+        // System.out.println(len + "hjg");
+        // for (int row = len; row <= len; row++) {
+        // for (int col = 0; col < n; col++) {
+        // ans[row][col]++;
+        // }
+        // }
+
+        // for (int j = 0; j < indices.length; j++) {
+        // if (j > 0) {
+        // int col1 = indices[i][j];
+        // System.out.println(col1 + "kwjd");
+
+        // for (int row = 0; row < m; row++) {
+        // for (int col = 0; col < n; col++) {
+        // if (col == col1)
+        // ans[row][col]++;
+        // }
+        // }
+        // }
+        // }
+        // }
 
         for (int[] num : indices) {
-            row[num[0]]++;
-            col[num[1]]++;
+            int row = num[0];
+            int col = num[1];
+
+            for (int j = 0; j < n; j++)
+                ans[row][j]++;
+
+            for (int i = 0; i < m; i++)
+                ans[i][col]++;
         }
 
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if ((row[i] + col[j]) % 2 != 0) {
-                    c++;
+        int count = 0;
+
+        for (int row = 0; row < m; row++) {
+            for (int col = 0; col < n; col++) {
+                if (ans[row][col] % 2 != 0) {
+                    count++;
                 }
             }
         }
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                System.out.println(row[i] + col[j]);
-            }
-            System.out.println();
-        }
-
-        return c;
+        return count;
     }
 }

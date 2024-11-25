@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ValidSquares",
+      "request": "launch",
+      "mainClass": "ValidSquares",
+      "projectName": "BinaryAssignments_b7493e47"
+    },
+    {
+      "type": "java",
       "name": "TwoSumSorted",
       "request": "launch",
       "mainClass": "TwoSumSorted",

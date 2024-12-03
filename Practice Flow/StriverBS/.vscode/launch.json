@@ -2,6 +2,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ThreesoldDivisor",
+      "request": "launch",
+      "mainClass": "ThreesoldDivisor",
+      "projectName": "StriverBS_c51b6587"
+    },
+    {
+      "type": "java",
+      "name": "SearchInRotated",
+      "request": "launch",
+      "mainClass": "SearchInRotated",
+      "projectName": "StriverBS_c51b6587"
+    },
+    {
+      "type": "java",
+      "name": "NthNumOfBoq",
+      "request": "launch",
+      "mainClass": "NthNumOfBoq",
+      "projectName": "StriverBS_c51b6587"
+    },
+    {
+      "type": "java",
       "name": "FirstAndLastOcc",
       "request": "launch",
       "mainClass": "FirstAndLastOcc",

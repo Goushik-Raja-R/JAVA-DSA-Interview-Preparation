@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "GasStation",
+      "request": "launch",
+      "mainClass": "GasStation",
+      "projectName": "StriverBS_c51b6587"
+    },
+    {
+      "type": "java",
       "name": "ThreesoldDivisor",
       "request": "launch",
       "mainClass": "ThreesoldDivisor",
